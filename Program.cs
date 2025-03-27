@@ -17,7 +17,7 @@ class Run
         SayaTubeVideo vid9 = new SayaTubeVideo("Review Film Rush oleh Aryoseto");
         SayaTubeVideo vid10 = new SayaTubeVideo("Review Film Dead Poets Society oleh Aryoseto");
         //test
-        //SayaTubeVideo vid10 = new SayaTubeVideo("Review Film Dead Poets Society oleh Aryoseto");
+        //SayaTubeVideo vid11 = new SayaTubeVideo(null);
         SayaTubeUser user = new SayaTubeUser("Aryoseto");
 
         user.AddVideo(vid1);
@@ -33,9 +33,10 @@ class Run
         //user.AddVideo(vid11);
 
         vid1.IncreasePlayCount(100);
+        //vid2.IncreasePlayCount(26000000);
 
 
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 100; i++)
         {
             vid4.IncreasePlayCount(1000000);
         }

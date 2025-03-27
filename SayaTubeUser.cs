@@ -16,8 +16,8 @@ namespace modul6_103022300114
 
         public SayaTubeUser(string username)
         {
-            //Contract.Requires(username.Length <= 200 && username != null);
-            //Debug.Assert(username.Length <= 100 && username != null, "Username tidak boleh melebihi 100 karakter atau null");
+            Contract.Requires(username.Length <= 200 && username != null);
+            Debug.Assert(username.Length <= 100 && username != null, "Username tidak boleh melebihi 100 karakter atau null");
             this.username = username;
             uploadedVideos = new List<SayaTubeVideo>();
         }
@@ -34,8 +34,8 @@ namespace modul6_103022300114
 
         public void AddVideo(SayaTubeVideo vid)
         {
-            //Contract.Requires(vid.GetPlayCount() > 250000000 && vid != null);
-            //Debug.Assert(vid.GetPlayCount() < 250000000 && vid != null, "Username tidak boleh melebihi 100 karakter atau null");
+            Contract.Requires(vid.GetPlayCount() > 250000000 && vid != null);
+            Debug.Assert(vid.GetPlayCount() < 250000000 && vid != null, "Username tidak boleh melebihi 100 karakter atau null");
             uploadedVideos.Add(vid);
         }
 
@@ -44,9 +44,9 @@ namespace modul6_103022300114
             Console.WriteLine("User: " + username);
             for (int i = 0; i < uploadedVideos.Count; i++)
             {
-                Console.WriteLine("Video " + i + 1 + " judul: " + uploadedVideos[i].GetTitle() + " Views: " + uploadedVideos[i].GetPlayCount());
+                Console.WriteLine("Video " + (i+1) + " judul: " + uploadedVideos[i].GetTitle() + " Views: " + uploadedVideos[i].GetPlayCount());
             }
-            //Contract.Ensures(uploadedVideos.Count <= 8);
+            Contract.Ensures(uploadedVideos.Count < 9);
         }
     }
 }
